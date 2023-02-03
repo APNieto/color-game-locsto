@@ -1,0 +1,44 @@
+P5 exercise: https://pledu.plataforma5.la/curso-introductorio---front-end/15--proyecto:-color-game/las-reglas-del-juego-12acdb0e
+Example site: https://stupefied-meitner-822fcd.netlify.app/
+
+
+LOGIC
+.Text showing the current color code  X
+.Add listeners to the boxes and react when the correct one is clicked  X
+    -Complete program reaction to guesses
+.Easy/hard buttons control amount of color boxes  X
+.Correct answers counter  X
+.Make toggle transition function to avoid repeating code  X  
+.Guess reaction: 
+    -Wrong scenario: 
+        .'Wrong' text appears on box
+        .Box dissolves
+        .Attempts diminish by one; if 0 is reached:
+            -correct box is shown with text on it
+            -score is reset
+            -new game loads
+    -Correct scenario:
+        .'Correct!' text appears on box        
+        .All other boxes, including failed attempts (whose 'wrong' text
+        disappeared) and header bg color transition to correct color
+.Adapt to the hard difficulty mode  X
+
+
+
+LAYOUT
+.Mobile/responsive version, use percentages
+    -> Investigate CSS float property;
+       sample site uses vertical padding, no height
+.Smooth color change transition when new colors are loaded  X
+.Hover on difficulty selectors  X
+.Hover on color blocks (transform-scale)  X
+.Selected difficulty background color change  X
+.Font  X
+.Correct/wrong answers:    
+    -make them non-selectable (user-select: none)  X
+    -responsive  X
+.Header size  X
+.Navbar centering, responsive  X
+
+
+.Add an alert box stating the rules of the game in 2 lines  x

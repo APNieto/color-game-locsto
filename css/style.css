@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    --background-color: #232323;
+    background-color: var(--background-color);
+    --primary-header-color: rgb(70, 130, 180);
+    font-family: 'Montserrat', 'Avenir';
+}
+
+
+
+/* Header */
+#header{    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--primary-header-color);    
+    color: white;
+    text-align: center;
+    transition: background-color 300ms;
+}
+#header h1 {
+    margin-top: 0;
+    font-size: 1.7rem;
+    font-weight: lighter;
+}
+#info-display{
+    display: flex;
+    justify-content: center;
+    position: relative;    
+    height: 60px;
+}
+#header-color-code{
+    position: absolute;    
+    margin-top: -20px;        
+    font-size: clamp(2.8rem, 10vw, 4rem);
+    font-weight: lighter;
+}
+
+
+/* Navbar */
+#navbar-container{
+    background-color: rgb(255, 255, 255);
+}
+#navbar{
+    width: min(90vw, 700px);
+    margin: 0 auto;    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--primary-header-color);
+    font-size: clamp(1rem, 4vw, 1.3rem);
+}
+#difficulty-selectors{
+    display: flex;
+    align-items: center;
+}
+#difficulty-selectors > div:first-child{
+    margin-right: 10px;
+}
+.difficulty-selector{
+    margin: 0 5px;
+    cursor: pointer;
+    user-select: none;
+    padding: 4px 10px;    
+    transition: background-color 300ms, color 300ms;
+}
+.difficulty-selector:hover, .activated-difficulty{
+    background-color: var(--primary-header-color);
+    color: white;
+}
+@media (max-width: 500px) {
+    #difficulty-selectors > div:first-child{
+        margin-right: 4px;
+    }    
+    .difficulty-selector{
+        margin: 0;
+        padding: 4px 5px;    
+    }
+}
+
+
+/* Boxes container */
+#boxes-container{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: min(3vw, 25px);
+    margin: 40px auto;
+    background-color: rgb(35,35,35,);
+}
+
+
+/* Color boxes */
+.color-boxes{
+    position: relative;
+    width: min(27vw, 180px);
+    height: min(27vw, 180px);
+    cursor: pointer;
+    border-radius: 10%;
+    transition: background-color 300ms, transform 180ms;
+}
+.color-boxes-hidden{
+    background-color: var(--background-color)!important;
+}
+.guess-result{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    font-size:  min(6.74vw, 2.8rem);
+    top: 33%;     
+    left: 2%;
+    margin-top: 0;
+    font-family: 'Righteous';
+    user-select: none;
+    transform: rotate(315deg);
+    transition: opacity 300ms;
+}
+.guess-result-visible{    
+    visibility: visible;   
+    opacity: 1;
+}
+.guess-result-wrong{
+    top: 32%;     
+    left: 10%;
+    color: red;
+}
+.guess-result-correct{
+    top: 33%;     
+    left: 2%;
+    color: black;
+}
+.guess-result-correct-one{
+    top: 24%;     
+    left: 10%;
+    text-align: center;
+    color: black;
+}
+@media (hover:hover) {
+    .color-boxes:hover{
+        transform: scale(1.08);
+    }
+}
+@media (hover:none) {
+    .color-boxes:active{
+        transform: scale(1.08);
+    }
+}
+
+
+
+
+
+#version-nr{
+    padding-top: 30px;
+    margin: auto;
+    width: min(87vw, 590px);
+    font-size: 0.8rem;
+    color: aliceblue;
+    user-select: none;
+}

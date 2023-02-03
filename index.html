@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./scripts/script.js"></script>
+    <title>The color game</title>
+</head>
+<body>
+
+    <header id="header">
+        <h1>THE COLOR GUESSING GAME</h1>
+        <div id="info-display">            
+            <h3 id="header-color-code"></h3>
+        </div>
+    </header>
+
+    <div id="navbar-container">
+        <navbar id="navbar">
+            <div id="score-section">Score: <span id="score">0</span></div>
+            <div id="difficulty-selectors">
+                <div>New game: </div>
+                <div id="easy-button" class="difficulty-selector">EASY</div>
+                <div id="hard-button" class="difficulty-selector">HARD</div>
+            </div>
+        </navbar>
+    </div>
+
+    <main id="boxes-container">
+        <div class="color-boxes">
+            <div class="guess-result"></div>
+        </div>
+        <div class="color-boxes">
+            <div class="guess-result"></div>
+        </div>
+        <div class="color-boxes">
+            <div class="guess-result"></div>
+        </div>
+    </main>
+
+    <p id="version-nr">Version 1.15</p>
+
+</body>
+</html>
